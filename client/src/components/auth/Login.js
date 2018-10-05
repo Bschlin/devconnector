@@ -9,7 +9,7 @@ class Login extends Component {
       errors: {}
     };
 
-    this.onChange = this.onChange;
+    // this.onChange = this.onChange;
     this.onSubmit = this.onSubmit.bind(this);
   }
 
