@@ -6,12 +6,15 @@ const initialState = {};
 
 const middleware = [thunk];
 
+// with middleware and enhancers when browser and extension aren't working
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer,
   initialState,
   composeEnhancers(applyMiddleware(...middleware))
 );
+
+// without advanced setup, browser problems when deploying app
 
 // const store = createStore(
 //   rootReducer,
