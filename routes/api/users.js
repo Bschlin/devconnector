@@ -80,7 +80,8 @@ router.post("/login", (req, res) => {
   User.findOne({ email: email }).then(user => {
     // check for user
     if (!user) {
-      errors.email = "User not found";
+      errors.email = "Incorrect user/password combination";
+      errors.password = "Incorrect user/password combination";
       return res.status(404).json(errors);
     }
 
@@ -104,7 +105,7 @@ router.post("/login", (req, res) => {
         );
       } else {
         //instead of sending error directly, add it to the object
-        errors.password = "Password incorrect";
+        errors.password = "Incorrect user/password combination";
         return res.status(400).json(errors);
       }
     });
