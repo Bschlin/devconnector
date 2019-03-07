@@ -47,6 +47,10 @@ componentDidMount() {
  };
 
  componentDidUpdate(prevProps) {
+   // if (prevProps.errors !== this.props.errors) {
+   //    this.setState({ errors: this.props.errors });
+   //  }
+ 
     if (this.props.profile.profile) {
       const profile = this.props.profile.profile;
  
