@@ -8,7 +8,8 @@ import { clearCurrentProfile } from "../../actions/profileActions";
 class Navbar extends Component {
   onLogoutClick(e) {
     e.preventDefault();
-    this.props.clearCurrentProfile();
+    // commented out the following due to profile spinning when logging out on profile/handle page (refer to lecture 64)
+    // this.props.clearCurrentProfile();
     this.props.logoutUser();
   }
 
